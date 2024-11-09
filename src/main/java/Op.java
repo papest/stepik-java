@@ -8,7 +8,11 @@ public class Op {
         int x, y;
         String op;
         int result;
-        Map<String, IntBinaryOperator> map = Map.of("+", Integer::sum, "-", (a, b) -> a - b, "", (a, b) -> 0);
+        Map<String, IntBinaryOperator> map = Map.of("+", Integer::sum,
+                "-", (a, b) -> a - b,
+                "x", (a, b) -> a * b,
+                "/", (a, b) -> a / b,
+                "", (a, b) -> 0);
 
 
         String[] inputValues = readInput();
